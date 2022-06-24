@@ -71,3 +71,14 @@ To use in parallel
 # parallel:spec[CPU_COUNT]
 bundle exec rails parallel:spec[2]
 ```
+
+### API Routes
+
+```plain
+api_company_groups      GET    /api/companies/:company_id/groups(.:format)    api/company/groups#index
+                        POST   /api/companies/:company_id/groups(.:format)    api/company/groups#create
+      api_companies     POST   /api/companies(.:format)                       api/companies#create
+        api_company     DELETE /api/companies/:id(.:format)                   api/companies#destroy
+  assign_api_user_group POST   /api/users/:user_id/group/:group_id(.:format)  api/users#assign_group
+          api_users     POST   /api/users(.:format)                           api/users#create
+```
